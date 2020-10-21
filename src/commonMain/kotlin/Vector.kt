@@ -40,6 +40,7 @@ class Vector<T: MyNumber<T>>(private val values: List<MyNumber<T>>) {
         }
         return null
     }
+    @Suppress("UNCHECKED_CAST")
     fun xMult(other: Vector<T>): Matrix<T> {
         val zero = get(0).myVal(0)
         val one = zero.myVal(1)
