@@ -177,7 +177,7 @@ class Fraction private constructor(val num: Long = 0L, val div: Long = 1L, val v
     }
 }
 class Complex(val real: Double = 0.0, val image: Double = 0.0): Algebraic<Complex> {
-    val abs  by lazy { (abs() as Complex).real }
+    val abs  by lazy { (absDouble() as MyDouble).value }
     override fun plus(other: MyNumber<Complex>) = Complex(real + (other as Complex).real, image + other.image)
     override fun unaryMinus() = Complex(-real, -image)
     override fun minus(other: MyNumber<Complex>) = this + -other

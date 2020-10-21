@@ -105,6 +105,7 @@ class Matrix<T: MyNumber<T>> private constructor(val width: Int, val height: Int
         }}
         return Matrix(width, height, zero, one, newData)
     }
+    @Suppress("UNCHECKED_CAST")
     fun conjugate(): Matrix<T> {
         val newValues = List(height) { j -> List(width) {
                 i -> (this.getIndexed(i, j) as Invertible<T>).conj()  as T
@@ -147,6 +148,7 @@ class Matrix<T: MyNumber<T>> private constructor(val width: Int, val height: Int
         val positive = (i + j) % 2 == 0
         return if (positive) getMinor(i, j)?.determinant() else getMinor(i, j)?.determinant()?.unaryMinus()
     }
+    @Suppress("UNCHECKED_CAST")
     fun coFactorMatrix(): Matrix<T>? {
         if (width != height) return null
         val newValues = List(height) { j -> List(width) { i -> coFactor(i, j)!! as T}}
