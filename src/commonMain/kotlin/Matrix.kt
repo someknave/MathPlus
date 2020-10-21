@@ -258,7 +258,7 @@ fun <T: Rootable<T>> Matrix<T>.factorQR(): Pair<Matrix<T>, Matrix<T>> {
     }
     return matQ to matR
 }
-
+/*
 fun Matrix<MyInt>.toInvertible(): Matrix<Fraction> {
     val newValues = List(height) { j -> Vector(List(width) {
             i ->
@@ -273,4 +273,4 @@ fun Matrix<MyLong>.toInvertible(): Matrix<Fraction> {
     })}
     return Matrix.Builder().rows(newValues)
 }
-fun <T: Invertible<T>> Matrix<T>.toInvertible() = this
+fun <T: Invertible<T>> Matrix<T>.toInvertible() = this */

@@ -177,7 +177,7 @@ class Fraction private constructor(val num: Long = 0L, val div: Long = 1L, val v
     }
 }
 class Complex(val real: Double = 0.0, val image: Double = 0.0): Algebraic<Complex> {
-    val abs  by lazy { (absDouble() as MyDouble).value }
+    val absD  by lazy { (absDouble() as MyDouble).value }
     override fun plus(other: MyNumber<Complex>) = Complex(real + (other as Complex).real, image + other.image)
     override fun unaryMinus() = Complex(-real, -image)
     override fun minus(other: MyNumber<Complex>) = this + -other
@@ -187,7 +187,7 @@ class Complex(val real: Double = 0.0, val image: Double = 0.0): Algebraic<Comple
     override fun times(other: MyNumber<Complex>) =
         Complex(real * (other as Complex).real - image * other.image, real * other.image + image * other.real)
     override fun conj() = Complex(real, -image)
-    override fun invert() = this.conj() / (this * this.conj()).abs
+    override fun invert() = this.conj() / (this * this.conj()).absD
     override fun div(other: MyNumber<Complex>) = this * (other as Complex).invert()
     override fun toString() = "$real + $image i"
     override fun equals(other: Any?): Boolean {
@@ -197,7 +197,7 @@ class Complex(val real: Double = 0.0, val image: Double = 0.0): Algebraic<Comple
             else -> false
         }
     }
-    override fun compareTo(other: MyNumber<Complex>) = abs.compareTo((other as Complex).abs)
+    override fun compareTo(other: MyNumber<Complex>) = absD.compareTo((other as Complex).absD)
     override fun abs() = Complex((this * conj()).real.pow(.5), 0.0) as Algebraic<Complex>
     override fun absDouble() = MyDouble((this * conj()).real.pow(.5)) as Rootable<MyDouble>
     override fun myVal(int: Int) = Complex(int.toDouble(), 0.0)
@@ -210,19 +210,19 @@ class Complex(val real: Double = 0.0, val image: Double = 0.0): Algebraic<Comple
             real > 0.0 -> atan(real / image)
             else -> atan(real / image) + PI
         }
-        return Polar.Builder(abs, theta).build()
+        return Polar.Builder(absD, theta).build()
     }
     override fun pow(num: Rootable<Complex>) = ((this.toPolar() as Polar).pow(num as Complex) as Polar).toComplex()
     override fun toInvertible() = this
     override fun toRootable() = this
     override fun times(other: Int) = Complex(real * other, image * other)
     override fun pow(num: Invertible<Fraction>) = this.pow(Complex((num as Fraction).value, 0.0))
-    override fun toMyDouble() = MyDouble(abs)
+    override fun toMyDouble() = MyDouble(absD)
     override fun getSign(): Algebraic<Complex> {
         return if (real == 0.0 && image == 0.0) {
             Complex(1.0)
         } else {
-            this / this.abs
+            this / this.absD
         }
     }
 }
