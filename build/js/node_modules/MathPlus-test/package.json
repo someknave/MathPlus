@@ -1,0 +1,15 @@
+{
+  "main": "kotlin/MathPlus-test.js",
+  "devDependencies": {},
+  "dependencies": {
+    "MathPlus": "1.0.0-SNAPSHOT",
+    "kotlin": "file:C:\\Users\\nesce\\IdeaProjects\\MathPlus\\build\\js\\packages_imported\\kotlin\\1.4.10",
+    "kotlin-test": "file:C:\\Users\\nesce\\IdeaProjects\\MathPlus\\build\\js\\packages_imported\\kotlin-test\\1.4.10",
+    "kotlin-test-js-runner": "file:C:\\Users\\nesce\\IdeaProjects\\MathPlus\\build\\js\\packages_imported\\kotlin-test-js-runner\\1.4.10"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": [],
+  "name": "MathPlus-test",
+  "version": "1.0.0-SNAPSHOT"
+}

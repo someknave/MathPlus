@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages\\MathPlus",
+    "packages\\MathPlus-test"
+  ],
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": [],
+  "name": "MathPlus",
+  "version": "1.0-SNAPSHOT"
+}

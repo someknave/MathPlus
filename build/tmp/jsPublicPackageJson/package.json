@@ -1,0 +1,10 @@
+{
+  "main": "kotlin/MathPlus.js",
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": [],
+  "name": "MathPlus",
+  "version": "1.0.0-SNAPSHOT"
+}
