@@ -1,4 +1,4 @@
-package commonMain
+package mathPlus.commonMain
 
 class Matrix<T: MyNumber<T>> private constructor(val width: Int, val height: Int,
                                                  val zero: MyNumber<T>, val one: MyNumber<T>,

@@ -1,4 +1,4 @@
-package commonMain
+package mathPlus.commonMain
 import kotlin.math.*
 
 interface MyNumber<T> {

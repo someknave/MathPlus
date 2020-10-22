@@ -1,4 +1,4 @@
-package commonMain
+package mathPlus.commonMain
 
 class Vector<T: MyNumber<T>>(private val values: List<MyNumber<T>>) {
     data class Builder<T: MyNumber<T>>(var values: List<MyNumber<T>>) {

@@ -43,10 +43,10 @@
   function MyNumber() {
   }
   MyNumber.prototype.absSq = function () {
-    return this.times_spmsj8$(this.conj());
+    return this.times_qzel40$(this.conj());
   };
   MyNumber.prototype.abs = function () {
-    return this.max_spmsj8$(this.unaryMinus());
+    return this.max_qzel40$(this.unaryMinus());
   };
   MyNumber.prototype.absDouble = function () {
     return this.abs().toRootable().toMyDouble();
@@ -54,21 +54,21 @@
   MyNumber.prototype.conj = function () {
     return this;
   };
-  MyNumber.prototype.max_spmsj8$ = function (other) {
-    return this.compareTo_spmsj8$(other) >= 0 ? this : other;
+  MyNumber.prototype.max_qzel40$ = function (other) {
+    return this.compareTo_qzel40$(other) >= 0 ? this : other;
   };
-  MyNumber.prototype.min_spmsj8$ = function (other) {
-    return this.compareTo_spmsj8$(other) <= 0 ? this : other;
+  MyNumber.prototype.min_qzel40$ = function (other) {
+    return this.compareTo_qzel40$(other) <= 0 ? this : other;
   };
   MyNumber.prototype.pow_za3lpa$ = function (int) {
     var ans = this.myVal_za3lpa$(0);
     for (var i = 0; i < int; i++) {
-      ans = ans.times_spmsj8$(this);
+      ans = ans.times_qzel40$(this);
     }
     return ans;
   };
   MyNumber.prototype.getSign = function () {
-    if (this.compareTo_spmsj8$(this.myVal_za3lpa$(0)) >= 0) {
+    if (this.compareTo_qzel40$(this.myVal_za3lpa$(0)) >= 0) {
       return this.myVal_za3lpa$(1);
     } else {
       return this.myVal_za3lpa$(1).unaryMinus();
@@ -82,7 +82,7 @@
   function Invertible() {
   }
   Invertible.prototype.invert = function () {
-    return this.myVal_za3lpa$(1).div_spmsj8$(this);
+    return this.myVal_za3lpa$(1).div_qzel40$(this);
   };
   Invertible.$metadata$ = {
     kind: Kind_INTERFACE,
@@ -92,7 +92,7 @@
   function Rootable() {
   }
   Rootable.prototype.sqrt = function () {
-    return this.pow_wv74ho$(Fraction$Companion_getInstance().HALF);
+    return this.pow_s165k8$(Fraction$Companion_getInstance().HALF);
   };
   Rootable.$metadata$ = {
     kind: Kind_INTERFACE,
@@ -111,7 +111,7 @@
       value = 0;
     this.value = value;
   }
-  MyInt.prototype.plus_spmsj8$ = function (other) {
+  MyInt.prototype.plus_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyInt(this.value + (Kotlin.isType(tmp$ = other, MyInt) ? tmp$ : throwCCE()).value | 0), MyNumber) ? tmp$_0 : throwCCE();
   };
@@ -119,15 +119,15 @@
     var tmp$;
     return Kotlin.isType(tmp$ = new MyInt(-this.value | 0), MyNumber) ? tmp$ : throwCCE();
   };
-  MyInt.prototype.minus_spmsj8$ = function (other) {
+  MyInt.prototype.minus_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyInt(this.value - (Kotlin.isType(tmp$ = other, MyInt) ? tmp$ : throwCCE()).value | 0), MyNumber) ? tmp$_0 : throwCCE();
   };
-  MyInt.prototype.times_spmsj8$ = function (other) {
+  MyInt.prototype.times_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyInt(Kotlin.imul(this.value, (Kotlin.isType(tmp$ = other, MyInt) ? tmp$ : throwCCE()).value)), MyNumber) ? tmp$_0 : throwCCE();
   };
-  MyInt.prototype.div_spmsj8$ = function (other) {
+  MyInt.prototype.div_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyInt(this.value / (Kotlin.isType(tmp$ = other, MyInt) ? tmp$ : throwCCE()).value | 0), MyNumber) ? tmp$_0 : throwCCE();
   };
@@ -144,7 +144,7 @@
       tmp$ = false;
     return tmp$;
   };
-  MyInt.prototype.compareTo_spmsj8$ = function (other) {
+  MyInt.prototype.compareTo_qzel40$ = function (other) {
     var tmp$;
     return Kotlin.primitiveCompareTo(this.value, (Kotlin.isType(tmp$ = other, MyInt) ? tmp$ : throwCCE()).value);
   };
@@ -180,7 +180,7 @@
       value = L0;
     this.value = value;
   }
-  MyLong.prototype.plus_spmsj8$ = function (other) {
+  MyLong.prototype.plus_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyLong(this.value.add((Kotlin.isType(tmp$ = other, MyLong) ? tmp$ : throwCCE()).value)), MyNumber) ? tmp$_0 : throwCCE();
   };
@@ -188,15 +188,15 @@
     var tmp$;
     return Kotlin.isType(tmp$ = new MyLong(this.value.unaryMinus()), MyNumber) ? tmp$ : throwCCE();
   };
-  MyLong.prototype.minus_spmsj8$ = function (other) {
+  MyLong.prototype.minus_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyLong(this.value.subtract((Kotlin.isType(tmp$ = other, MyLong) ? tmp$ : throwCCE()).value)), MyNumber) ? tmp$_0 : throwCCE();
   };
-  MyLong.prototype.times_spmsj8$ = function (other) {
+  MyLong.prototype.times_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyLong(this.value.multiply((Kotlin.isType(tmp$ = other, MyLong) ? tmp$ : throwCCE()).value)), MyNumber) ? tmp$_0 : throwCCE();
   };
-  MyLong.prototype.div_spmsj8$ = function (other) {
+  MyLong.prototype.div_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyLong(this.value.div((Kotlin.isType(tmp$ = other, MyLong) ? tmp$ : throwCCE()).value)), MyNumber) ? tmp$_0 : throwCCE();
   };
@@ -213,7 +213,7 @@
       tmp$ = false;
     return tmp$;
   };
-  MyLong.prototype.compareTo_spmsj8$ = function (other) {
+  MyLong.prototype.compareTo_qzel40$ = function (other) {
     var tmp$;
     return this.value.compareTo_11rb$((Kotlin.isType(tmp$ = other, MyLong) ? tmp$ : throwCCE()).value);
   };
@@ -249,7 +249,7 @@
       value = 0.0;
     this.value = value;
   }
-  MyDouble.prototype.plus_spmsj8$ = function (other) {
+  MyDouble.prototype.plus_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyDouble(this.value + (Kotlin.isType(tmp$ = other, MyDouble) ? tmp$ : throwCCE()).value), Rootable) ? tmp$_0 : throwCCE();
   };
@@ -257,15 +257,15 @@
     var tmp$;
     return Kotlin.isType(tmp$ = new MyDouble(-this.value), Rootable) ? tmp$ : throwCCE();
   };
-  MyDouble.prototype.minus_spmsj8$ = function (other) {
+  MyDouble.prototype.minus_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyDouble(this.value - (Kotlin.isType(tmp$ = other, MyDouble) ? tmp$ : throwCCE()).value), Rootable) ? tmp$_0 : throwCCE();
   };
-  MyDouble.prototype.times_spmsj8$ = function (other) {
+  MyDouble.prototype.times_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyDouble(this.value * (Kotlin.isType(tmp$ = other, MyDouble) ? tmp$ : throwCCE()).value), Rootable) ? tmp$_0 : throwCCE();
   };
-  MyDouble.prototype.div_spmsj8$ = function (other) {
+  MyDouble.prototype.div_qzel40$ = function (other) {
     var tmp$, tmp$_0;
     return Kotlin.isType(tmp$_0 = new MyDouble(this.value / (Kotlin.isType(tmp$ = other, MyDouble) ? tmp$ : throwCCE()).value), Rootable) ? tmp$_0 : throwCCE();
   };
@@ -282,7 +282,7 @@
       tmp$ = false;
     return tmp$;
   };
-  MyDouble.prototype.compareTo_spmsj8$ = function (other) {
+  MyDouble.prototype.compareTo_qzel40$ = function (other) {
     var tmp$;
     return Kotlin.compareTo(this.value, (Kotlin.isType(tmp$ = other, MyDouble) ? tmp$ : throwCCE()).value);
   };
@@ -290,7 +290,7 @@
     var tmp$;
     return Kotlin.isType(tmp$ = new MyDouble(int), Rootable) ? tmp$ : throwCCE();
   };
-  MyDouble.prototype.pow_t6segd$ = function (num) {
+  MyDouble.prototype.pow_qi8z6v$ = function (num) {
     var tmp$, tmp$_0, tmp$_1;
     tmp$_0 = this.value;
     var x = (Kotlin.isType(tmp$ = num, MyDouble) ? tmp$ : throwCCE()).value;
@@ -308,7 +308,7 @@
   MyDouble.prototype.times_14dthe$ = function (other) {
     return new MyDouble(this.value * other);
   };
-  MyDouble.prototype.pow_wv74ho$ = function (num) {
+  MyDouble.prototype.pow_s165k8$ = function (num) {
     var tmp$, tmp$_0;
     tmp$_0 = this.value;
     var x = (Kotlin.isType(tmp$ = num, Fraction) ? tmp$ : throwCCE()).value;
@@ -422,7 +422,7 @@
   Fraction$Builder.prototype.equals = function (other) {
     return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.numerator, other.numerator) && Kotlin.equals(this.divisor, other.divisor)))));
   };
-  Fraction.prototype.plus_spmsj8$ = function (other) {
+  Fraction.prototype.plus_qzel40$ = function (other) {
     var tmp$;
     return (new Fraction$Builder()).build_3pjtqy$(this.num.multiply((Kotlin.isType(tmp$ = other, Fraction) ? tmp$ : throwCCE()).div).add(this.div.multiply(other.num)), this.div.multiply(other.div));
   };
@@ -430,19 +430,19 @@
     var tmp$;
     return Kotlin.isType(tmp$ = new Fraction(this.num.unaryMinus(), this.div), Invertible) ? tmp$ : throwCCE();
   };
-  Fraction.prototype.minus_spmsj8$ = function (other) {
-    return this.plus_spmsj8$(other.unaryMinus());
+  Fraction.prototype.minus_qzel40$ = function (other) {
+    return this.plus_qzel40$(other.unaryMinus());
   };
-  Fraction.prototype.times_spmsj8$ = function (other) {
+  Fraction.prototype.times_qzel40$ = function (other) {
     var tmp$;
     return (new Fraction$Builder()).build_3pjtqy$(this.num.multiply((Kotlin.isType(tmp$ = other, Fraction) ? tmp$ : throwCCE()).num), this.div.multiply(other.div));
   };
   Fraction.prototype.invert = function () {
     return (new Fraction$Builder()).build_3pjtqy$(this.div, this.num);
   };
-  Fraction.prototype.div_spmsj8$ = function (other) {
+  Fraction.prototype.div_qzel40$ = function (other) {
     var tmp$;
-    return this.times_spmsj8$((Kotlin.isType(tmp$ = other, Fraction) ? tmp$ : throwCCE()).invert());
+    return this.times_qzel40$((Kotlin.isType(tmp$ = other, Fraction) ? tmp$ : throwCCE()).invert());
   };
   Fraction.prototype.toString = function () {
     return this.num.toString() + ' / ' + this.div.toString();
@@ -457,7 +457,7 @@
       tmp$ = false;
     return tmp$;
   };
-  Fraction.prototype.compareTo_spmsj8$ = function (other) {
+  Fraction.prototype.compareTo_qzel40$ = function (other) {
     var tmp$;
     return Kotlin.compareTo(this.value, (Kotlin.isType(tmp$ = other, Fraction) ? tmp$ : throwCCE()).value);
   };
@@ -496,23 +496,23 @@
       image = 0.0;
     this.real = real;
     this.image = image;
-    this.absD_bptxeo$_0 = lazy(Complex$absD$lambda(this));
+    this.absD_r1wlqk$_0 = lazy(Complex$absD$lambda(this));
   }
   Object.defineProperty(Complex.prototype, 'absD', {
     configurable: true,
     get: function () {
-      return this.absD_bptxeo$_0.value;
+      return this.absD_r1wlqk$_0.value;
     }
   });
-  Complex.prototype.plus_spmsj8$ = function (other) {
+  Complex.prototype.plus_qzel40$ = function (other) {
     var tmp$;
     return new Complex(this.real + (Kotlin.isType(tmp$ = other, Complex) ? tmp$ : throwCCE()).real, this.image + other.image);
   };
   Complex.prototype.unaryMinus = function () {
     return new Complex(-this.real, -this.image);
   };
-  Complex.prototype.minus_spmsj8$ = function (other) {
-    return this.plus_spmsj8$(other.unaryMinus());
+  Complex.prototype.minus_qzel40$ = function (other) {
+    return this.plus_qzel40$(other.unaryMinus());
   };
   Complex.prototype.times_14dthe$ = function (other) {
     return new Complex(this.real * other, this.image * other);
@@ -520,7 +520,7 @@
   Complex.prototype.div_14dthe$ = function (scalar) {
     return this.times_14dthe$(1 / scalar);
   };
-  Complex.prototype.times_spmsj8$ = function (other) {
+  Complex.prototype.times_qzel40$ = function (other) {
     var tmp$;
     return new Complex(this.real * (Kotlin.isType(tmp$ = other, Complex) ? tmp$ : throwCCE()).real - this.image * other.image, this.real * other.image + this.image * other.real);
   };
@@ -528,11 +528,11 @@
     return new Complex(this.real, -this.image);
   };
   Complex.prototype.invert = function () {
-    return this.conj().div_14dthe$(this.times_spmsj8$(this.conj()).absD);
+    return this.conj().div_14dthe$(this.times_qzel40$(this.conj()).absD);
   };
-  Complex.prototype.div_spmsj8$ = function (other) {
+  Complex.prototype.div_qzel40$ = function (other) {
     var tmp$;
-    return this.times_spmsj8$((Kotlin.isType(tmp$ = other, Complex) ? tmp$ : throwCCE()).invert());
+    return this.times_qzel40$((Kotlin.isType(tmp$ = other, Complex) ? tmp$ : throwCCE()).invert());
   };
   Complex.prototype.toString = function () {
     return this.real.toString() + ' + ' + this.image + ' i';
@@ -547,18 +547,18 @@
       tmp$ = false;
     return tmp$;
   };
-  Complex.prototype.compareTo_spmsj8$ = function (other) {
+  Complex.prototype.compareTo_qzel40$ = function (other) {
     var tmp$;
     return Kotlin.compareTo(this.absD, (Kotlin.isType(tmp$ = other, Complex) ? tmp$ : throwCCE()).absD);
   };
   Complex.prototype.abs = function () {
     var tmp$;
-    var $receiver = this.times_spmsj8$(this.conj()).real;
+    var $receiver = this.times_qzel40$(this.conj()).real;
     return Kotlin.isType(tmp$ = new Complex(Math_0.pow($receiver, 0.5), 0.0), Algebraic) ? tmp$ : throwCCE();
   };
   Complex.prototype.absDouble = function () {
     var tmp$;
-    var $receiver = this.times_spmsj8$(this.conj()).real;
+    var $receiver = this.times_qzel40$(this.conj()).real;
     return Kotlin.isType(tmp$ = new MyDouble(Math_0.pow($receiver, 0.5)), Rootable) ? tmp$ : throwCCE();
   };
   Complex.prototype.myVal_za3lpa$ = function (int) {
@@ -584,9 +584,9 @@
     var theta = tmp$;
     return (new Polar$Builder(this.absD, theta)).build();
   };
-  Complex.prototype.pow_t6segd$ = function (num) {
+  Complex.prototype.pow_qi8z6v$ = function (num) {
     var tmp$, tmp$_0, tmp$_1;
-    return (Kotlin.isType(tmp$_1 = (Kotlin.isType(tmp$ = this.toPolar(), Polar) ? tmp$ : throwCCE()).pow_qmr21m$(Kotlin.isType(tmp$_0 = num, Complex) ? tmp$_0 : throwCCE()), Polar) ? tmp$_1 : throwCCE()).toComplex();
+    return (Kotlin.isType(tmp$_1 = (Kotlin.isType(tmp$ = this.toPolar(), Polar) ? tmp$ : throwCCE()).pow_knsepa$(Kotlin.isType(tmp$_0 = num, Complex) ? tmp$_0 : throwCCE()), Polar) ? tmp$_1 : throwCCE()).toComplex();
   };
   Complex.prototype.toInvertible = function () {
     return this;
@@ -597,9 +597,9 @@
   Complex.prototype.times_za3lpa$ = function (other) {
     return new Complex(this.real * other, this.image * other);
   };
-  Complex.prototype.pow_wv74ho$ = function (num) {
+  Complex.prototype.pow_s165k8$ = function (num) {
     var tmp$;
-    return this.pow_t6segd$(new Complex((Kotlin.isType(tmp$ = num, Fraction) ? tmp$ : throwCCE()).value, 0.0));
+    return this.pow_qi8z6v$(new Complex((Kotlin.isType(tmp$ = num, Fraction) ? tmp$ : throwCCE()).value, 0.0));
   };
   Complex.prototype.toMyDouble = function () {
     return new MyDouble(this.absD);
@@ -669,7 +669,7 @@
   Polar$Builder.prototype.equals = function (other) {
     return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.r, other.r) && Kotlin.equals(this.theta, other.theta)))));
   };
-  Polar.prototype.plus_spmsj8$ = function (other) {
+  Polar.prototype.plus_qzel40$ = function (other) {
     var tmp$, tmp$_0, tmp$_1;
     tmp$_0 = this.theta - (Kotlin.isType(tmp$ = other, Polar) ? tmp$ : throwCCE()).theta;
     if (tmp$_0 === 0.0)
@@ -677,37 +677,37 @@
     else if (tmp$_0 === math.PI || tmp$_0 === -math.PI)
       return (new Polar$Builder(this.r - other.r, this.theta)).build();
     else
-      return (Kotlin.isType(tmp$_1 = this.toComplex().plus_spmsj8$(other.toComplex()), Complex) ? tmp$_1 : throwCCE()).toPolar();
+      return (Kotlin.isType(tmp$_1 = this.toComplex().plus_qzel40$(other.toComplex()), Complex) ? tmp$_1 : throwCCE()).toPolar();
   };
   Polar.prototype.unaryMinus = function () {
     return (new Polar$Builder(this.r, this.theta + math.PI)).build();
   };
-  Polar.prototype.minus_spmsj8$ = function (other) {
-    return this.plus_spmsj8$(other.unaryMinus());
+  Polar.prototype.minus_qzel40$ = function (other) {
+    return this.plus_qzel40$(other.unaryMinus());
   };
-  Polar.prototype.times_spmsj8$ = function (other) {
+  Polar.prototype.times_qzel40$ = function (other) {
     var tmp$;
     return (new Polar$Builder(this.r * (Kotlin.isType(tmp$ = other, Polar) ? tmp$ : throwCCE()).r, this.theta + other.theta)).build();
   };
-  Polar.prototype.div_spmsj8$ = function (other) {
+  Polar.prototype.div_qzel40$ = function (other) {
     var tmp$;
     return (new Polar$Builder(this.r / (Kotlin.isType(tmp$ = other, Polar) ? tmp$ : throwCCE()).r, this.theta - other.theta)).build();
   };
-  Polar.prototype.compareTo_spmsj8$ = function (other) {
+  Polar.prototype.compareTo_qzel40$ = function (other) {
     var tmp$;
     return Kotlin.compareTo(this.r, (Kotlin.isType(tmp$ = other, Polar) ? tmp$ : throwCCE()).r);
   };
   Polar.prototype.myVal_za3lpa$ = function (int) {
     return (new Polar$Builder(int, 0.0)).build();
   };
-  Polar.prototype.pow_t6segd$ = function (num) {
+  Polar.prototype.pow_qi8z6v$ = function (num) {
     var tmp$, tmp$_0;
-    return this.pow_qmr21m$(Kotlin.isType(tmp$_0 = (Kotlin.isType(tmp$ = num, Polar) ? tmp$ : throwCCE()).toComplex(), Complex) ? tmp$_0 : throwCCE());
+    return this.pow_knsepa$(Kotlin.isType(tmp$_0 = (Kotlin.isType(tmp$ = num, Polar) ? tmp$ : throwCCE()).toComplex(), Complex) ? tmp$_0 : throwCCE());
   };
   Polar.prototype.conj = function () {
     return (new Polar$Builder(this.r, math.PI - this.theta)).build();
   };
-  Polar.prototype.pow_qmr21m$ = function (num) {
+  Polar.prototype.pow_knsepa$ = function (num) {
     var x = this.r;
     var ln = Math_0.log(x);
     var exp = num.real * ln - num.image * this.theta;
@@ -746,7 +746,7 @@
     var tmp$;
     return Kotlin.isType(tmp$ = new MyDouble(this.r), Rootable) ? tmp$ : throwCCE();
   };
-  Polar.prototype.pow_wv74ho$ = function (num) {
+  Polar.prototype.pow_s165k8$ = function (num) {
     var tmp$;
     var power = (Kotlin.isType(tmp$ = num, Fraction) ? tmp$ : throwCCE()).value;
     var $receiver = this.r;
@@ -763,7 +763,7 @@
     this.zero = zero;
     this.one = one;
     this.values_0 = values;
-    this.det_j2q9ca$_0 = lazy(Matrix$det$lambda(this));
+    this.det_qvrn9m$_0 = lazy(Matrix$det$lambda(this));
   }
   function Matrix$Builder(width, height) {
     if (width === void 0)
@@ -777,7 +777,7 @@
     this.width = width;
     this.height = height;
   };
-  Matrix$Builder.prototype.rows_xtqkgv$ = function (vectors) {
+  Matrix$Builder.prototype.rows_pxhtut$ = function (vectors) {
     var tmp$;
     var destination = ArrayList_init_0();
     var tmp$_0;
@@ -834,7 +834,7 @@
     var values = list;
     return new Matrix(width, height, zero, one, values);
   };
-  Matrix$Builder.prototype.columns_xtqkgv$ = function (vectors) {
+  Matrix$Builder.prototype.columns_pxhtut$ = function (vectors) {
     var tmp$;
     var destination = ArrayList_init_0();
     var tmp$_0;
@@ -891,7 +891,7 @@
     var values = list;
     return new Matrix(width, height, zero, one, values);
   };
-  Matrix$Builder.prototype.build_vn8rns$ = function (data) {
+  Matrix$Builder.prototype.build_juu1im$ = function (data) {
     var zero = data.get_za3lpa$(0).myVal_za3lpa$(0);
     var one = zero.myVal_za3lpa$(1);
     var size = this.height;
@@ -908,10 +908,10 @@
     var values = list;
     return new Matrix(this.width, this.height, zero, one, values);
   };
-  Matrix$Builder.prototype.build_5ffu1p$ = function (width, height, zero, one, values) {
+  Matrix$Builder.prototype.build_cf8x2h$ = function (width, height, zero, one, values) {
     return new Matrix(width, height, zero, one, values);
   };
-  Matrix$Builder.prototype.identity_7t92ky$ = function (seed, width, height) {
+  Matrix$Builder.prototype.identity_yhz85k$ = function (seed, width, height) {
     if (height === void 0)
       height = width;
     var one = seed.myVal_za3lpa$(1);
@@ -957,7 +957,7 @@
   Object.defineProperty(Matrix.prototype, 'det', {
     configurable: true,
     get: function () {
-      return this.det_j2q9ca$_0.value;
+      return this.det_qvrn9m$_0.value;
     }
   });
   Matrix.prototype.getRow_za3lpa$ = function (j) {
@@ -989,7 +989,7 @@
   Matrix.prototype.getIndexed_vux9f0$ = function (i, j) {
     return this.values_0.get_za3lpa$(j).get_za3lpa$(i);
   };
-  Matrix.prototype.plus_4tglwb$ = function (other) {
+  Matrix.prototype.plus_u1spcz$ = function (other) {
     if (this.width !== other.width || this.height !== other.height) {
       return null;
     }var size = this.height;
@@ -999,14 +999,14 @@
       var size_0 = this.width;
       var list_0 = ArrayList_init(size_0);
       for (var index_0 = 0; index_0 < size_0; index_0++) {
-        list_0.add_11rb$(this.getIndexed_vux9f0$(index_0, index).plus_spmsj8$(other.getIndexed_vux9f0$(index_0, index)));
+        list_0.add_11rb$(this.getIndexed_vux9f0$(index_0, index).plus_qzel40$(other.getIndexed_vux9f0$(index_0, index)));
       }
       tmp$.call(list, list_0);
     }
     var newData = list;
     return new Matrix(this.width, this.height, this.zero, this.one, newData);
   };
-  Matrix.prototype.times_4tglwb$ = function (other) {
+  Matrix.prototype.times_u1spcz$ = function (other) {
     if (this.width !== other.height) {
       return null;
     }var size = this.height;
@@ -1016,25 +1016,25 @@
       var size_0 = other.width;
       var list_0 = ArrayList_init(size_0);
       for (var index_0 = 0; index_0 < size_0; index_0++) {
-        list_0.add_11rb$(ensureNotNull(this.getRow_za3lpa$(index).times_rejnfn$(other.getCol_za3lpa$(index_0))));
+        list_0.add_11rb$(ensureNotNull(this.getRow_za3lpa$(index).times_k9oufv$(other.getCol_za3lpa$(index_0))));
       }
       tmp$.call(list, list_0);
     }
     var newData = list;
     return new Matrix(other.width, this.height, this.zero, this.one, newData);
   };
-  Matrix.prototype.times_rejnfn$ = function (vector) {
+  Matrix.prototype.times_k9oufv$ = function (vector) {
     if (this.width === vector.size) {
       var size = this.height;
       var list = ArrayList_init(size);
       for (var index = 0; index < size; index++) {
-        list.add_11rb$(ensureNotNull(this.getRow_za3lpa$(index).times_rejnfn$(vector)));
+        list.add_11rb$(ensureNotNull(this.getRow_za3lpa$(index).times_k9oufv$(vector)));
       }
       var list_0 = list;
       return (new Vector$Builder(list_0)).build();
     }return null;
   };
-  Matrix.prototype.times_ojsogh$ = function (other) {
+  Matrix.prototype.times_6gsczt$ = function (other) {
     var size = this.height;
     var list = ArrayList_init(size);
     for (var index = 0; index < size; index++) {
@@ -1042,7 +1042,7 @@
       var size_0 = this.width;
       var list_0 = ArrayList_init(size_0);
       for (var index_0 = 0; index_0 < size_0; index_0++) {
-        list_0.add_11rb$(other.times_spmsj8$(this.values_0.get_za3lpa$(index).get_za3lpa$(index_0)));
+        list_0.add_11rb$(other.times_qzel40$(this.values_0.get_za3lpa$(index).get_za3lpa$(index_0)));
       }
       tmp$.call(list, list_0);
     }
@@ -1063,7 +1063,7 @@
       tmp$.call(list, list_0);
     }
     var newValues = list;
-    return (new Matrix$Builder()).build_5ffu1p$(this.width, this.height, this.zero, this.one, newValues);
+    return (new Matrix$Builder()).build_cf8x2h$(this.width, this.height, this.zero, this.one, newValues);
   };
   Matrix.prototype.transpose = function () {
     var size = this.width;
@@ -1122,11 +1122,11 @@
     if (this.width === 1)
       return this.values_0.get_za3lpa$(0).get_za3lpa$(0);
     if (this.width === 2)
-      return this.values_0.get_za3lpa$(0).get_za3lpa$(0).times_spmsj8$(this.values_0.get_za3lpa$(1).get_za3lpa$(1)).minus_spmsj8$(this.values_0.get_za3lpa$(0).get_za3lpa$(1).times_spmsj8$(this.values_0.get_za3lpa$(1).get_za3lpa$(0)));
+      return this.values_0.get_za3lpa$(0).get_za3lpa$(0).times_qzel40$(this.values_0.get_za3lpa$(1).get_za3lpa$(1)).minus_qzel40$(this.values_0.get_za3lpa$(0).get_za3lpa$(1).times_qzel40$(this.values_0.get_za3lpa$(1).get_za3lpa$(0)));
     var ans = this.values_0.get_za3lpa$(0).get_za3lpa$(0).myVal_za3lpa$(0);
     tmp$ = this.width;
     for (var i = 0; i < tmp$; i++) {
-      ans = ans.plus_spmsj8$(this.values_0.get_za3lpa$(0).get_za3lpa$(i).times_spmsj8$(ensureNotNull(this.coFactor_vux9f0$(i, 0))));
+      ans = ans.plus_qzel40$(this.values_0.get_za3lpa$(0).get_za3lpa$(i).times_qzel40$(ensureNotNull(this.coFactor_vux9f0$(i, 0))));
     }
     return ans;
   };
@@ -1151,7 +1151,7 @@
       tmp$.call(list, list_0);
     }
     var newValues = list;
-    return (new Matrix$Builder()).build_5ffu1p$(this.width, this.height, this.zero, this.one, newValues);
+    return (new Matrix$Builder()).build_cf8x2h$(this.width, this.height, this.zero, this.one, newValues);
   };
   Matrix.prototype.toString = function () {
     var tmp$, tmp$_0;
@@ -1177,15 +1177,15 @@
     var newValues = list;
     return new Matrix(this.width, this.height, this.zero, this.one, newValues);
   };
-  Matrix.prototype.minus_4tglwb$ = function (other) {
-    return this.plus_4tglwb$(other.unaryMinus());
+  Matrix.prototype.minus_u1spcz$ = function (other) {
+    return this.plus_u1spcz$(other.unaryMinus());
   };
   Matrix.prototype.normF = function () {
     var tmp$;
     var sum = this.zero;
     tmp$ = this.width;
     for (var i = 0; i < tmp$; i++) {
-      sum = sum.plus_spmsj8$(this.getCol_za3lpa$(i).absSqr());
+      sum = sum.plus_qzel40$(this.getCol_za3lpa$(i).absSqr());
     }
     return sum.sqrt();
   };
@@ -1194,7 +1194,7 @@
     var ans = this.zero;
     tmp$ = this.width;
     for (var i = 0; i < tmp$; i++) {
-      ans = ans.max_spmsj8$(this.getCol_za3lpa$(i).norm1());
+      ans = ans.max_qzel40$(this.getCol_za3lpa$(i).norm1());
     }
     return ans;
   };
@@ -1206,7 +1206,7 @@
     var ans = this.zero;
     tmp$ = this.height;
     for (var j = 0; j < tmp$; j++) {
-      ans = ans.max_spmsj8$(this.getRow_za3lpa$(j).norm1());
+      ans = ans.max_qzel40$(this.getRow_za3lpa$(j).norm1());
     }
     return ans;
   };
@@ -1219,7 +1219,7 @@
     var x0 = x.get_za3lpa$(0);
     var sign = x0.getSign();
     var mag = x.norm2();
-    var v0 = x0.plus_spmsj8$(sign.times_spmsj8$(mag));
+    var v0 = x0.plus_qzel40$(sign.times_qzel40$(mag));
     if (invertible) {
       var size = x.size;
       var list = ArrayList_init(size);
@@ -1229,7 +1229,7 @@
         if (index_0 === 0) {
           init$result = this.one;
         } else {
-          init$result = x.get_za3lpa$(index_0).div_spmsj8$(v0);
+          init$result = x.get_za3lpa$(index_0).div_qzel40$(v0);
         }
         tmp$_0.call(list, init$result);
       }
@@ -1250,7 +1250,7 @@
       tmp$ = list_0;
     }
     var list_1 = tmp$;
-    return new Pair(new Vector(list_1), sign.times_spmsj8$(mag));
+    return new Pair(new Vector(list_1), sign.times_qzel40$(mag));
   };
   function Matrix$det$lambda(this$Matrix) {
     return function () {
@@ -1270,13 +1270,13 @@
     return div(mat.transpose(), Kotlin.isType(tmp$ = $receiver.det, Invertible) ? tmp$ : throwCCE());
   }
   function div($receiver, scalar) {
-    return $receiver.times_ojsogh$(scalar.invert());
+    return $receiver.times_6gsczt$(scalar.invert());
   }
   function factorQR($receiver) {
     var tmp$, tmp$_0;
     var seed = $receiver.one;
     var matR = {v: $receiver};
-    var matQ = {v: (new Matrix$Builder()).identity_7t92ky$(seed, $receiver.height)};
+    var matQ = {v: (new Matrix$Builder()).identity_yhz85k$(seed, $receiver.height)};
     var hhVectors = LinkedHashMap_init();
     tmp$ = matR.v.width;
     for (var index = 0; index < tmp$; index++) {
@@ -1284,12 +1284,12 @@
         break;
       var houseHolder = matR.v.getHh_vux9f0$(index);
       var herm = houseHolder.first.conjugate();
-      var scaleFactor = herm.absSqr().div_spmsj8$(seed.myVal_za3lpa$(2));
+      var scaleFactor = herm.absSqr().div_qzel40$(seed.myVal_za3lpa$(2));
       plus(hhVectors, to(houseHolder.first, to(herm, scaleFactor)));
       var size = herm.size;
       var list = ArrayList_init(size);
       for (var index_0 = 0; index_0 < size; index_0++) {
-        list.add_11rb$(ensureNotNull(herm.times_rejnfn$(matR.v.getCol_za3lpa$(index + index_0 | 0).subVector_vux9f0$(index))).div_spmsj8$(scaleFactor));
+        list.add_11rb$(ensureNotNull(herm.times_k9oufv$(matR.v.getCol_za3lpa$(index + index_0 | 0).subVector_vux9f0$(index))).div_qzel40$(scaleFactor));
       }
       var row = new Vector(list);
       var size_0 = matR.v.height;
@@ -1304,20 +1304,20 @@
           if (index_2 < index || index_1 < index) {
             init$result = matR.v.getIndexed_vux9f0$(index_2, index_1);
           } else if (index_1 === index && index_2 === index) {
-            init$result = matR.v.getIndexed_vux9f0$(index_2, index_1).minus_spmsj8$(houseHolder.second);
+            init$result = matR.v.getIndexed_vux9f0$(index_2, index_1).minus_qzel40$(houseHolder.second);
           } else if (index_1 === index) {
             init$result = $receiver.zero;
           } else if (index_2 === index) {
-            init$result = matR.v.getIndexed_vux9f0$(index_2, index_1).minus_spmsj8$(row.get_za3lpa$(index_1 - index | 0));
+            init$result = matR.v.getIndexed_vux9f0$(index_2, index_1).minus_qzel40$(row.get_za3lpa$(index_1 - index | 0));
           } else {
-            init$result = matR.v.getIndexed_vux9f0$(index_2, index_1).minus_spmsj8$(houseHolder.first.get_za3lpa$(index_2 - index | 0).times_spmsj8$(row.get_za3lpa$(index_1 - index | 0)));
+            init$result = matR.v.getIndexed_vux9f0$(index_2, index_1).minus_qzel40$(houseHolder.first.get_za3lpa$(index_2 - index | 0).times_qzel40$(row.get_za3lpa$(index_1 - index | 0)));
           }
           tmp$_2.call(list_1, init$result);
         }
         tmp$_1.call(list_0, new Vector(list_1));
       }
       var newValues = list_0;
-      matR.v = (new Matrix$Builder()).rows_xtqkgv$(newValues);
+      matR.v = (new Matrix$Builder()).rows_pxhtut$(newValues);
     }
     var vectors = reversed(hhVectors.keys);
     tmp$_0 = vectors.iterator();
@@ -1330,7 +1330,7 @@
       var size_2 = vector.size;
       var list_2 = ArrayList_init(size_2);
       for (var index_4 = 0; index_4 < size_2; index_4++) {
-        list_2.add_11rb$(ensureNotNull(herm_0.times_rejnfn$(matQ.v.getCol_za3lpa$(index_4))).div_spmsj8$(scaleFactor_0));
+        list_2.add_11rb$(ensureNotNull(herm_0.times_k9oufv$(matQ.v.getCol_za3lpa$(index_4))).div_qzel40$(scaleFactor_0));
       }
       var row_0 = new Vector(list_2);
       var size_3 = matQ.v.height;
@@ -1345,20 +1345,20 @@
           if (index_6 < index_3 || index_5 < index_3) {
             init$result_0 = matQ.v.getIndexed_vux9f0$(index_6, index_5);
           } else if (index_5 === index_3 && index_6 === index_3) {
-            init$result_0 = $receiver.one.minus_spmsj8$($receiver.one.div_spmsj8$(scaleFactor_0));
+            init$result_0 = $receiver.one.minus_qzel40$($receiver.one.div_qzel40$(scaleFactor_0));
           } else if (index_5 === index_3) {
-            init$result_0 = vector.get_za3lpa$(index_6 - index_3 | 0).unaryMinus().div_spmsj8$(scaleFactor_0);
+            init$result_0 = vector.get_za3lpa$(index_6 - index_3 | 0).unaryMinus().div_qzel40$(scaleFactor_0);
           } else if (index_6 === index_3) {
             init$result_0 = row_0.get_za3lpa$(index_5 - index_3 | 0).unaryMinus();
           } else {
-            init$result_0 = matQ.v.getIndexed_vux9f0$(index_6, index_5).minus_spmsj8$(vector.get_za3lpa$(index_6 - index_3 | 0).times_spmsj8$(row_0.get_za3lpa$(index_5 - index_3 | 0)));
+            init$result_0 = matQ.v.getIndexed_vux9f0$(index_6, index_5).minus_qzel40$(vector.get_za3lpa$(index_6 - index_3 | 0).times_qzel40$(row_0.get_za3lpa$(index_5 - index_3 | 0)));
           }
           tmp$_5.call(list_4, init$result_0);
         }
         tmp$_4.call(list_3, new Vector(list_4));
       }
       var newValues_0 = list_3;
-      matQ.v = (new Matrix$Builder()).rows_xtqkgv$(newValues_0);
+      matQ.v = (new Matrix$Builder()).rows_pxhtut$(newValues_0);
     }
     return to(matQ.v, matR.v);
   }
@@ -1380,7 +1380,7 @@
   Vector$Builder.prototype.component1 = function () {
     return this.values;
   };
-  Vector$Builder.prototype.copy_37eb1o$ = function (values) {
+  Vector$Builder.prototype.copy_4n2jl2$ = function (values) {
     return new Vector$Builder(values === void 0 ? this.values : values);
   };
   Vector$Builder.prototype.toString = function () {
@@ -1402,23 +1402,23 @@
   Vector.prototype.get_za3lpa$ = function (i) {
     return this.values_0.get_za3lpa$(i);
   };
-  Vector.prototype.plus_rejnfn$ = function (other) {
+  Vector.prototype.plus_k9oufv$ = function (other) {
     if (this.size === other.size) {
       var size = this.size;
       var list = ArrayList_init(size);
       for (var index = 0; index < size; index++) {
-        list.add_11rb$(this.values_0.get_za3lpa$(index).plus_spmsj8$(other.get_za3lpa$(index)));
+        list.add_11rb$(this.values_0.get_za3lpa$(index).plus_qzel40$(other.get_za3lpa$(index)));
       }
       var list_0 = list;
       return new Vector(list_0);
     }return null;
   };
-  Vector.prototype.times_rejnfn$ = function (other) {
+  Vector.prototype.times_k9oufv$ = function (other) {
     if (this.size === other.size) {
       var size = this.size;
       var list = ArrayList_init(size);
       for (var index = 0; index < size; index++) {
-        list.add_11rb$(this.values_0.get_za3lpa$(index).times_spmsj8$(other.get_za3lpa$(index)));
+        list.add_11rb$(this.values_0.get_za3lpa$(index).times_qzel40$(other.get_za3lpa$(index)));
       }
       var list_0 = list;
       var tmp$;
@@ -1426,7 +1426,7 @@
       tmp$ = list_0.iterator();
       while (tmp$.hasNext()) {
         var element = tmp$.next();
-        accumulator = accumulator.plus_spmsj8$(element);
+        accumulator = accumulator.plus_qzel40$(element);
       }
       return accumulator;
     }return null;
@@ -1440,30 +1440,30 @@
     var list_0 = list;
     return new Vector(list_0);
   };
-  Vector.prototype.minus_rejnfn$ = function (other) {
-    return this.plus_rejnfn$(other.unaryMinus());
+  Vector.prototype.minus_k9oufv$ = function (other) {
+    return this.plus_k9oufv$(other.unaryMinus());
   };
-  Vector.prototype.times_dim9c4$ = function (scalar) {
+  Vector.prototype.times_u0k8nk$ = function (scalar) {
     var size = this.size;
     var list = ArrayList_init(size);
     for (var index = 0; index < size; index++) {
-      list.add_11rb$(scalar.times_spmsj8$(this.values_0.get_za3lpa$(index)));
+      list.add_11rb$(scalar.times_qzel40$(this.values_0.get_za3lpa$(index)));
     }
     var list_0 = list;
     return new Vector(list_0);
   };
-  Vector.prototype.times_4tglwb$ = function (matrix) {
+  Vector.prototype.times_u1spcz$ = function (matrix) {
     if (this.size === matrix.height) {
       var size = matrix.width;
       var list = ArrayList_init(size);
       for (var index = 0; index < size; index++) {
-        list.add_11rb$(ensureNotNull(this.times_rejnfn$(matrix.getCol_za3lpa$(index))));
+        list.add_11rb$(ensureNotNull(this.times_k9oufv$(matrix.getCol_za3lpa$(index))));
       }
       var list_0 = list;
       return new Vector(list_0);
     }return null;
   };
-  Vector.prototype.xMult_rejnfn$ = function (other) {
+  Vector.prototype.xMult_k9oufv$ = function (other) {
     var zero = this.get_za3lpa$(0).myVal_za3lpa$(0);
     var one = zero.myVal_za3lpa$(1);
     var size = this.size;
@@ -1474,12 +1474,12 @@
       var list_0 = ArrayList_init(size_0);
       for (var index_0 = 0; index_0 < size_0; index_0++) {
         var tmp$_0;
-        list_0.add_11rb$(Kotlin.isType(tmp$_0 = other.get_za3lpa$(index_0).times_spmsj8$(this.get_za3lpa$(index)), MyNumber) ? tmp$_0 : throwCCE());
+        list_0.add_11rb$(Kotlin.isType(tmp$_0 = other.get_za3lpa$(index_0).times_qzel40$(this.get_za3lpa$(index)), MyNumber) ? tmp$_0 : throwCCE());
       }
       tmp$.call(list, list_0);
     }
     var values = list;
-    return (new Matrix$Builder()).build_5ffu1p$(other.size, this.size, zero, one, values);
+    return (new Matrix$Builder()).build_cf8x2h$(other.size, this.size, zero, one, values);
   };
   Vector.prototype.subVector_vux9f0$ = function (start, end) {
     if (end === void 0)
@@ -1491,8 +1491,8 @@
     if (vertical === void 0)
       vertical = true;
     if (vertical)
-      return (new Matrix$Builder()).columns_xtqkgv$(listOf(this));
-    return (new Matrix$Builder()).rows_xtqkgv$(listOf(this));
+      return (new Matrix$Builder()).columns_pxhtut$(listOf(this));
+    return (new Matrix$Builder()).rows_pxhtut$(listOf(this));
   };
   Vector.prototype.isZeros = function () {
     var tmp$;
@@ -1532,7 +1532,7 @@
       throw UnsupportedOperationException_init("Empty collection can't be reduced.");
     var accumulator = iterator.next();
     while (iterator.hasNext()) {
-      accumulator = accumulator.plus_spmsj8$(iterator.next());
+      accumulator = accumulator.plus_qzel40$(iterator.next());
     }
     return accumulator;
   };
@@ -1550,7 +1550,7 @@
       throw UnsupportedOperationException_init("Empty collection can't be reduced.");
     var accumulator = iterator.next();
     while (iterator.hasNext()) {
-      accumulator = accumulator.plus_spmsj8$(iterator.next());
+      accumulator = accumulator.plus_qzel40$(iterator.next());
     }
     return accumulator;
   };
@@ -1568,7 +1568,7 @@
       throw UnsupportedOperationException_init("Empty collection can't be reduced.");
     var accumulator = iterator.next();
     while (iterator.hasNext()) {
-      accumulator = accumulator.max_spmsj8$(iterator.next());
+      accumulator = accumulator.max_qzel40$(iterator.next());
     }
     return accumulator;
   };
@@ -1576,10 +1576,10 @@
     return this.absSqr().sqrt();
   };
   Vector.prototype.norm2Double = function () {
-    return this.absSqr().absDouble().pow_wv74ho$(Fraction$Companion_getInstance().HALF);
+    return this.absSqr().absDouble().pow_s165k8$(Fraction$Companion_getInstance().HALF);
   };
   Vector.prototype.toHhReflector = function () {
-    var scalar = this.absSqr().div_spmsj8$(this.values_0.get_za3lpa$(0).myVal_za3lpa$(2));
+    var scalar = this.absSqr().div_qzel40$(this.values_0.get_za3lpa$(0).myVal_za3lpa$(2));
     var one = scalar.myVal_za3lpa$(1);
     var invertible = Kotlin.isType(scalar, Invertible);
     var size = this.size;
@@ -1592,27 +1592,28 @@
         var tmp$_0 = list_0.add_11rb$;
         var init$result;
         if (invertible && index_0 === index) {
-          init$result = one.minus_spmsj8$(this.values_0.get_za3lpa$(index).times_spmsj8$(this.values_0.get_za3lpa$(index_0).conj()).div_spmsj8$(scalar));
+          init$result = one.minus_qzel40$(this.values_0.get_za3lpa$(index).times_qzel40$(this.values_0.get_za3lpa$(index_0).conj()).div_qzel40$(scalar));
         } else if (invertible) {
-          init$result = this.values_0.get_za3lpa$(index).unaryMinus().times_spmsj8$(this.values_0.get_za3lpa$(index_0).conj()).div_spmsj8$(scalar);
+          init$result = this.values_0.get_za3lpa$(index).unaryMinus().times_qzel40$(this.values_0.get_za3lpa$(index_0).conj()).div_qzel40$(scalar);
         } else if (index_0 === index) {
-          init$result = scalar.minus_spmsj8$(this.values_0.get_za3lpa$(index).times_spmsj8$(this.values_0.get_za3lpa$(index_0).conj()));
+          init$result = scalar.minus_qzel40$(this.values_0.get_za3lpa$(index).times_qzel40$(this.values_0.get_za3lpa$(index_0).conj()));
         } else {
-          init$result = this.values_0.get_za3lpa$(index).unaryMinus().times_spmsj8$(this.values_0.get_za3lpa$(index_0).conj());
+          init$result = this.values_0.get_za3lpa$(index).unaryMinus().times_qzel40$(this.values_0.get_za3lpa$(index_0).conj());
         }
         tmp$_0.call(list_0, init$result);
       }
       tmp$.call(list, new Vector(list_0));
     }
     var vectors = list;
-    return (new Matrix$Builder()).rows_xtqkgv$(vectors);
+    return (new Matrix$Builder()).rows_pxhtut$(vectors);
   };
   Vector.$metadata$ = {
     kind: Kind_CLASS,
     simpleName: 'Vector',
     interfaces: []
   };
-  var package$commonMain = _.commonMain || (_.commonMain = {});
+  var package$mathPlus = _.mathPlus || (_.mathPlus = {});
+  var package$commonMain = package$mathPlus.commonMain || (package$mathPlus.commonMain = {});
   package$commonMain.MyNumber = MyNumber;
   package$commonMain.Invertible = Invertible;
   package$commonMain.Rootable = Rootable;
@@ -1630,17 +1631,17 @@
   package$commonMain.Polar = Polar;
   Matrix.Builder = Matrix$Builder;
   package$commonMain.Matrix = Matrix;
-  package$commonMain.inverse_x2zxdc$ = inverse;
-  package$commonMain.div_71xu2$ = div;
-  package$commonMain.factorQR_p4ui3g$ = factorQR;
+  package$commonMain.inverse_izmllg$ = inverse;
+  package$commonMain.div_u7iv96$ = div;
+  package$commonMain.factorQR_roz620$ = factorQR;
   Vector.Builder = Vector$Builder;
   package$commonMain.Vector = Vector;
   Invertible.prototype.absSq = MyNumber.prototype.absSq;
   Invertible.prototype.abs = MyNumber.prototype.abs;
   Invertible.prototype.absDouble = MyNumber.prototype.absDouble;
   Invertible.prototype.conj = MyNumber.prototype.conj;
-  Invertible.prototype.max_spmsj8$ = MyNumber.prototype.max_spmsj8$;
-  Invertible.prototype.min_spmsj8$ = MyNumber.prototype.min_spmsj8$;
+  Invertible.prototype.max_qzel40$ = MyNumber.prototype.max_qzel40$;
+  Invertible.prototype.min_qzel40$ = MyNumber.prototype.min_qzel40$;
   Invertible.prototype.pow_za3lpa$ = MyNumber.prototype.pow_za3lpa$;
   Invertible.prototype.getSign = MyNumber.prototype.getSign;
   Rootable.prototype.pow_za3lpa$ = Invertible.prototype.pow_za3lpa$;
@@ -1649,8 +1650,8 @@
   Rootable.prototype.abs = Invertible.prototype.abs;
   Rootable.prototype.absDouble = Invertible.prototype.absDouble;
   Rootable.prototype.conj = Invertible.prototype.conj;
-  Rootable.prototype.max_spmsj8$ = Invertible.prototype.max_spmsj8$;
-  Rootable.prototype.min_spmsj8$ = Invertible.prototype.min_spmsj8$;
+  Rootable.prototype.max_qzel40$ = Invertible.prototype.max_qzel40$;
+  Rootable.prototype.min_qzel40$ = Invertible.prototype.min_qzel40$;
   Rootable.prototype.getSign = Invertible.prototype.getSign;
   Algebraic.prototype.sqrt = Rootable.prototype.sqrt;
   Algebraic.prototype.pow_za3lpa$ = Rootable.prototype.pow_za3lpa$;
@@ -1659,23 +1660,23 @@
   Algebraic.prototype.abs = Rootable.prototype.abs;
   Algebraic.prototype.absDouble = Rootable.prototype.absDouble;
   Algebraic.prototype.conj = Rootable.prototype.conj;
-  Algebraic.prototype.max_spmsj8$ = Rootable.prototype.max_spmsj8$;
-  Algebraic.prototype.min_spmsj8$ = Rootable.prototype.min_spmsj8$;
+  Algebraic.prototype.max_qzel40$ = Rootable.prototype.max_qzel40$;
+  Algebraic.prototype.min_qzel40$ = Rootable.prototype.min_qzel40$;
   Algebraic.prototype.getSign = Rootable.prototype.getSign;
   MyInt.prototype.absSq = MyNumber.prototype.absSq;
   MyInt.prototype.abs = MyNumber.prototype.abs;
   MyInt.prototype.absDouble = MyNumber.prototype.absDouble;
   MyInt.prototype.conj = MyNumber.prototype.conj;
-  MyInt.prototype.max_spmsj8$ = MyNumber.prototype.max_spmsj8$;
-  MyInt.prototype.min_spmsj8$ = MyNumber.prototype.min_spmsj8$;
+  MyInt.prototype.max_qzel40$ = MyNumber.prototype.max_qzel40$;
+  MyInt.prototype.min_qzel40$ = MyNumber.prototype.min_qzel40$;
   MyInt.prototype.pow_za3lpa$ = MyNumber.prototype.pow_za3lpa$;
   MyInt.prototype.getSign = MyNumber.prototype.getSign;
   MyLong.prototype.absSq = MyNumber.prototype.absSq;
   MyLong.prototype.abs = MyNumber.prototype.abs;
   MyLong.prototype.absDouble = MyNumber.prototype.absDouble;
   MyLong.prototype.conj = MyNumber.prototype.conj;
-  MyLong.prototype.max_spmsj8$ = MyNumber.prototype.max_spmsj8$;
-  MyLong.prototype.min_spmsj8$ = MyNumber.prototype.min_spmsj8$;
+  MyLong.prototype.max_qzel40$ = MyNumber.prototype.max_qzel40$;
+  MyLong.prototype.min_qzel40$ = MyNumber.prototype.min_qzel40$;
   MyLong.prototype.pow_za3lpa$ = MyNumber.prototype.pow_za3lpa$;
   MyLong.prototype.getSign = MyNumber.prototype.getSign;
   MyDouble.prototype.pow_za3lpa$ = Rootable.prototype.pow_za3lpa$;
@@ -1685,28 +1686,28 @@
   MyDouble.prototype.abs = Rootable.prototype.abs;
   MyDouble.prototype.absDouble = Rootable.prototype.absDouble;
   MyDouble.prototype.conj = Rootable.prototype.conj;
-  MyDouble.prototype.max_spmsj8$ = Rootable.prototype.max_spmsj8$;
-  MyDouble.prototype.min_spmsj8$ = Rootable.prototype.min_spmsj8$;
+  MyDouble.prototype.max_qzel40$ = Rootable.prototype.max_qzel40$;
+  MyDouble.prototype.min_qzel40$ = Rootable.prototype.min_qzel40$;
   MyDouble.prototype.getSign = Rootable.prototype.getSign;
   Fraction.prototype.absSq = Invertible.prototype.absSq;
   Fraction.prototype.abs = Invertible.prototype.abs;
   Fraction.prototype.absDouble = Invertible.prototype.absDouble;
   Fraction.prototype.conj = Invertible.prototype.conj;
-  Fraction.prototype.max_spmsj8$ = Invertible.prototype.max_spmsj8$;
-  Fraction.prototype.min_spmsj8$ = Invertible.prototype.min_spmsj8$;
+  Fraction.prototype.max_qzel40$ = Invertible.prototype.max_qzel40$;
+  Fraction.prototype.min_qzel40$ = Invertible.prototype.min_qzel40$;
   Fraction.prototype.pow_za3lpa$ = Invertible.prototype.pow_za3lpa$;
   Fraction.prototype.getSign = Invertible.prototype.getSign;
   Complex.prototype.pow_za3lpa$ = Algebraic.prototype.pow_za3lpa$;
   Complex.prototype.sqrt = Algebraic.prototype.sqrt;
   Complex.prototype.absSq = Algebraic.prototype.absSq;
-  Complex.prototype.max_spmsj8$ = Algebraic.prototype.max_spmsj8$;
-  Complex.prototype.min_spmsj8$ = Algebraic.prototype.min_spmsj8$;
+  Complex.prototype.max_qzel40$ = Algebraic.prototype.max_qzel40$;
+  Complex.prototype.min_qzel40$ = Algebraic.prototype.min_qzel40$;
   Polar.prototype.pow_za3lpa$ = Algebraic.prototype.pow_za3lpa$;
   Polar.prototype.sqrt = Algebraic.prototype.sqrt;
   Polar.prototype.invert = Algebraic.prototype.invert;
   Polar.prototype.absSq = Algebraic.prototype.absSq;
-  Polar.prototype.max_spmsj8$ = Algebraic.prototype.max_spmsj8$;
-  Polar.prototype.min_spmsj8$ = Algebraic.prototype.min_spmsj8$;
+  Polar.prototype.max_qzel40$ = Algebraic.prototype.max_qzel40$;
+  Polar.prototype.min_qzel40$ = Algebraic.prototype.min_qzel40$;
   Polar.prototype.getSign = Algebraic.prototype.getSign;
   Kotlin.defineModule('MathPlus', _);
   return _;

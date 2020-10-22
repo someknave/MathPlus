@@ -2,13 +2,29 @@ plugins {
     kotlin("multiplatform") version "1.4.10"
 }
 group = "me.laptop"
-version = "1.0-SNAPSHOT"
+version = "1.01-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 kotlin {
     jvm {
+        compilations {
+            val main = getByName("main")
+            tasks {
+                register<Jar>("fatJar") {
+                    group = "application"
+                    manifest {
+                        attributes["Implementation-Title"] = "Gradle Jar"
+                        attributes["Implementation-Version"] = archiveVersion
+                        attributes["Main-Class"] = "[[mainClassPath]]"
+                    }
+                    archiveBaseName.set("${project.name}-fat")
+                    from(main.output.classesDirs, main.compileDependencyFiles)
+                    with(getByName("jar") as CopySpec)
+                }
+            }
+        }
         compilations.all {
             kotlinOptions.jvmTarget = "1.8"
         }
